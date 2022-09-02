@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Reusables starts here  */
+button a {
+    text-decoration: none;
+    color: var(--white-color);
+    }
+
+    span a {
+        text-decoration: none;
+        color: var(--white-color);
+    }
+/* Reusables ends here */
+
+/* Footer section starts here */
+
+footer {
+    background: var( --main-color); 
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    color: var(--white-color);
+    align-items: center;
+}
+
+/* .footer-copyright { */
+     /* border: 3px solid white;  */
+    /* align-self: center; */
+    /* height: 60px;
+    width: 200px;  */
+/* } */
+
+.footer-icon__holder {
+     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 3px solid white; */
+    /* height: 60px;
+    width: 200px; */
+    /* color: var(--black-color); */
+}
+
+/* .footer-button__holder { */
+    /* border: 3px solid var(--white-color); */
+    /* height: 60px; */
+    /* width: 200px; */
+/* } */
+
+.footer-icons {
+    color: var(--white-color);
+    width: 40px;
+    height: 40px;
+    border: 2px double var(--white-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.footer-icons:hover{
+    background: var(--main-color-dark);
+}
+
+.footer-button__holder button {
+    padding: 15px;
+    background: transparent;
+    border: 2px solid var(--white-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.footer-button__holder button:hover{
+    background: var(--main-color-dark);
+}
+/* Footer section ends here */
