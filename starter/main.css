@@ -4,6 +4,18 @@
     box-sizing: border-box;
 }
 /* Reusables starts here  */
+
+@font-face {
+    font-family: 'food-Lato';
+    src: url('./font/Lato-Regular.ttf')format('truetype'),  url('./font/lato-regular-webfont.woff')format('woff'),
+    url('./font/lato-regular-webfont.woff2')format('woff2');
+}
+body {
+    height: 1500px;
+    /* font-family: 'Lato', sans-serif; */
+    font-family: 'food-Lato', sans-serif;
+
+}
 button a {
     text-decoration: none;
     color: var(--white-color);
@@ -13,7 +25,208 @@ button a {
         text-decoration: none;
         color: var(--white-color);
     }
+.btn {
+    padding: 15px 20px;
+}
+.btn-main {
+    background: var(--main-color);
+    color: var(--white-color);
+    border: 2px solid var(--main-color);
+}
+.btn-main:hover {
+    background: transparent;
+    color: var(--main-color);
+}
 /* Reusables ends here */
+
+/* starts here */
+/* ends here */
+
+
+/* starts here */
+.about-us__banner-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 3px solid tomato; */
+    text-align: center;
+    height: 250px;
+    background: var(--gray-gradient), url('./img/about3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom right; 
+    /* background-attachment: fixed; */
+}
+.about-us__banner-holder h2 {
+    color: var(--main-color);
+}
+.about-us__banner-holder p {
+    margin: 20px 0;
+}
+.btn-waves {
+    margin: 20px 0 0 0;
+    height: 60px;
+    width: 60px;
+    border: 2px solid var(--white-color);
+    border-radius: 50%;
+    color: var(--white-color);
+    background: var(--main-color);
+    /* outline: 10px solid var(--black-color); */
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: ripple 2s infinite;
+}
+/* ends here */
+
+
+/* explore food section starts here */
+.explore-foods {
+    /* border: 3px solid tomato; */
+    padding: 30px 0;
+    border-bottom: 70px solid var(--main-color);
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+.explore-foods h2 {
+    color: var(--main-color);
+               
+}
+
+.explore-foods h2+p {
+    padding: 20px 0;
+}
+.foodcard-container {
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 3px solid tomato; */
+}
+.foodcard__item {
+    /* border: 3px solid tomato; */
+    width: 320px;
+    /* overflow: hidden; */
+}
+.foodcard__image-holder {
+    /* border: 3px solid black; */
+    height: 250px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.foodcard__image-holder img {
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.foodcard__text-holder {
+    text-align: left ;
+}
+.foodcard__text-holder h4, 
+.foodcard__text-holder h3 {
+    margin: 10px 0;
+    /* padding: 0 0 10px 0; */
+}
+.foodcard__item h3 {
+    border-bottom: 0.5px solid var(--light-text-color);
+    padding: 0 0 10px 0;
+}
+.foodcard__text-holder span {
+    text-decoration: line-through;
+    color: var( --text-color);
+}
+.food__text-holder button:hover {
+    color: var(--main-color);
+} 
+/* explore food section ends here */
+
+
+/* faq section starts here */
+.faq {
+    /* border: 3px solid tomato; */
+    padding-top: 30px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+.faqs__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+.faqs__item h3 {
+ text-align: left;
+ color: var(--main-color-dark);
+ margin: 20px 0;   
+ font-weight: bolder;
+}
+.faqs__item span {
+    color: var(--main-color);
+    margin: 0 10px 0 0;
+    
+}
+.faqs__item p {
+    text-align: justify;
+}
+.faqs__item {
+    max-width: 45%;
+}
+.faq__parallax {
+    /* border: 3px solid tomato; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 200px;
+    background: var(--gradient), url('./img/cta.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.faq__parallax h2 {
+    color: var(--white-color);
+    font-size: 30px;
+    font-weight: bold;
+}
+/* faq section ends here */
+
+/* cta section starts here */
+.cta {
+ padding: 30px 0;
+ text-align: center;   
+}
+.cta h2 {
+    color: var(--main-color-dark);
+    font-size: 35px;
+    font-weight: bolder;
+}
+.cta p {
+    margin: 20px 0;
+}
+.cta__input-holder {
+    display: flex;
+    justify-content: center;
+}
+.cta input {
+    padding: 15px 10px;
+    border: 2px solid var(--main-color);
+    border-right: none;
+    outline: none;
+    width: 200px;
+    transition: all 1s ease;
+}
+.cta input:hover {
+    width: 300px;
+
+}
+.cta button {
+    border: 2px solid var(--main-color);
+    background: var(--main-color);
+    color: var(--white-color);
+}
+/* cta section ends here */
 
 /* Footer section starts here */
 
