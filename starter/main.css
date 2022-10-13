@@ -7,11 +7,16 @@
 
 @font-face {
     font-family: 'food-Lato';
-    src: url('./font/Lato-Regular.ttf')format('truetype'),  url('./font/lato-regular-webfont.woff')format('woff'),
+    src: url('./font/Lato-Regular.ttf')format('truetype'), 
+    url('./font/Lato-Regular.ttf')format('truetype'),
+    url('./font/lato-regular-webfont.woff')format('woff'),
     url('./font/lato-regular-webfont.woff2')format('woff2');
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
-    height: 1500px;
+    /* height: 1500px; */
     /* font-family: 'Lato', sans-serif; */
     font-family: 'food-Lato', sans-serif;
 
@@ -37,14 +42,314 @@ button a {
     background: transparent;
     color: var(--main-color);
 }
+.btn-light {
+    border: 2px solid var(--main-color);
+    background: transparent;
+    /* color: var(--main-color); */
+}
+.btn-light:hover {
+    color: var(--main-color);
+}
+.banner-icon {
+    margin-left: 10px;
+}
 /* Reusables ends here */
 
-/* starts here */
-/* ends here */
+/* header section starts here */
+
+/* nav section starts here */
+.backdrop {
+    background: var(--light-text-color);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+
+}
 
 
-/* starts here */
+
+/* ========================== */
+.nav-mobile{
+    display: none;
+    background: var(--main-color);
+    justify-content: space-between;
+    padding: 10px 30px;
+    align-items: center;
+}
+.mobile-nav__logo-holder {
+    border: 3px solid var(--white-color);
+    color: var(--white-color);
+    font-size: 25px;
+    padding: 5px;
+}
+.nav-mobile__brand {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.nav-mobile__brand span {
+    color: var(--white-color);
+    margin-left: 10px;
+    font-size: 25px;
+}
+.hamburger-menu {
+    /* border: 2px solid var(--white-color); */
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    
+}
+.menu-bars {
+    height: 3px;
+    width: 100%;
+    background: var(--white-color);
+    position: relative;
+}
+.show .menu-bars {
+    background: transparent;
+}
+
+.show .menu-bars::before{
+    transform: rotate(45deg);
+    background: var(--main-color);
+}
+
+.show .menu-bars::after {
+    transform: rotate(-45deg);
+    background: var(--main-color);
+}
+.menu-bars::before,
+.menu-bars::after
+{
+    content: '';
+    background: var(--white-color);
+    position: absolute;
+    height: 3px;
+    width: 100%;
+}
+.menu-bars::before {
+    transform: translateY(-10px);
+}
+.menu-bars::after {
+    transform: translateY(10px);
+}
+.mobile__linkholder {
+    display: none;
+    width: 50%;
+    height: 35%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: var(--main-color);
+    /* padding-left: 15px; */
+     /* border: 3px solid tomato;  */
+}
+.showlinks {
+    display: block;
+}
+.mobile__linkholder button {
+    border: 2px solid var(--white-color);
+    background: transparent;
+    color: var(--white-color);
+    margin-left: 15px;
+}
+.mobile__linkholder li{
+    list-style: none;
+    /* background: var(--main-color); */
+   
+}
+.mobile__header-links {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: var(--white-color);
+}
+.mobile__header-links:hover {
+    background: var(--white-color);
+    color: var(--main-color);
+}
+.active-link {
+    background: var(--white-color);
+    color: var(--main-color);
+}
+/* ========================== */
+.nav-desktop {
+    position: fixed;
+    width: 100%;
+    background: var(--white-color);
+}
+
+.header-logo {
+    top: 0;
+    left: 60px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-color);
+    width: 100px;
+    height: 100px;
+    color: var(--white-color);
+    font-size: 50px;
+}
+.link-holder {
+    display: flex;
+    /* border: 3px solid tomato; */
+    justify-content: flex-end;
+}
+.link-holder button {
+    margin-left: 20px;
+}
+.link-holder ul {
+    display: flex;
+    /* border: 3px solid black; */
+     /* width: 500px; */
+}
+.link-holder li {
+    list-style: none;
+    border: 2px solid var(--white-color);
+}
+.link-holder li:hover  {
+    border: 2px solid var(--main-color);
+
+}
+.header-links {
+    display: block;
+    color: var(--main-color);
+    text-decoration: none;
+    padding: 15px 20px;
+} 
+
+/* nav section  ends here */
+.header__banner {
+    padding-top: 130px;
+    padding-bottom: 30px;
+    /* border: 3px solid blue; */
+    /* height: 450px; */
+    background: url('./img/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: top left; */
+}
+.header-banner__container {
+    /* border: 3px solid black; */
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+}
+.header-banner__text-content {
+    /* border: 3px solid blue; */
+    width: 50%;
+}
+.header-banner__text-content h1 {
+    color: var(--main-color-dark);
+    font-size: 45px;
+    line-height: 1.1;
+    font-weight: 300;
+}
+.header-banner__text-content p {
+    margin: 20px 0;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+.header-banner__text-content button {
+    margin-right: 20px;
+}
+.header__counter {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    background: var(--main-color);
+}
+.counter__item {
+    width: 180px;
+    text-align: center;
+    color: var(--white-color);
+    /* height: 90px; */
+    /* border: 3px solid  var(--white-color); */
+}
+.counter__item h2 {
+    font-size: 28px;
+    font-weight: bolder;
+    padding-bottom: 5px;
+}
+/* Tutorial purposes only */
+/* .counter__item p {
+    text-transform: lowercase;
+} */
+/* header section ends here */
+
+
+/* about-us section starts here */
+
+.about-us__card-container{
+    width: 90%;
+    padding: 30px 0;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    /* border: 3px solid tomato; */
+    justify-content: space-between;
+}
+
+.about-us__card-imageholder{
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+    /* background-position: bottom; */
+    border-radius: 30px;
+    height: 350px;
+    width: 48%;
+    /* border: 3px solid black;  */
+    overflow: hidden;
+}
+.about-us__card-imageholder img {
+    /* height: auto; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-us__text-content-holder{
+    /* height: 350px; */
+    width: 48%;
+    /* border: 3px solid blue; */
+}
+.about-us__text-content-holder ul{
+    padding-bottom: 20px;
+}
+.about-us__text-content-holder li {
+    list-style: none;
+}
+.cardcheck-icon{
+    color: var(--main-color);
+    padding-right: 15px;
+    font-size: 20px;
+}
+.about-us__text-content-holder h2{
+    color: var(--main-color);
+    background: var(--light-text-color);
+    border-left: 5px solid var(--main-color);
+    border-right: 5px solid var(--main-color);
+    padding: 10px;
+    font-size: 28px;
+    /* border: 0 3px 0 3px solid var(--main-color); */
+}
+.about-us__text-content-holder p{
+    margin: 20px 0;
+}
+.cardicon {
+    margin-left: 10px;
+}
+
 .about-us__banner-holder {
+    padding: 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,19 +357,21 @@ button a {
     text-align: center;
     height: 250px;
     background: var(--gray-gradient), url('./img/about3.jpg');
+    /* background-attachment: fixed; */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom right; 
     /* background-attachment: fixed; */
 }
 .about-us__banner-holder h2 {
+    font-size: 30px;
     color: var(--main-color);
 }
 .about-us__banner-holder p {
     margin: 20px 0;
 }
 .btn-waves {
-    margin: 20px 0 0 0;
+    margin: 30px 0 0 0;
     height: 60px;
     width: 60px;
     border: 2px solid var(--white-color);
@@ -99,6 +406,7 @@ button a {
     padding: 20px 0;
 }
 .foodcard-container {
+    flex-wrap: wrap;
     display: flex;
     justify-content: space-evenly;
     /* border: 3px solid tomato; */
@@ -292,3 +600,4 @@ footer {
     background: var(--main-color-dark);
 }
 /* Footer section ends here */
+

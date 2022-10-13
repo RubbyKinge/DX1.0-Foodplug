@@ -11,11 +11,96 @@
     <link rel="stylesheet" href="./fontawesome/css/all.css">
     <link rel="stylesheet" href="defaults.css">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
-
+    <div class="backdrop" onclick="Addclass()"></div>
     <!-- header section starts here -->
-    <header></header>
+    <header>
+        <nav class="nav-mobile">
+            
+            <div class="nav-mobile__brand">
+                <div class="mobile-nav__logo-holder">
+                    <i class="fa-regular fa-hand-lizard"></i>
+                </div>
+                <span>foodplug</span>
+            </div>
+            
+            <div class="hamburger-menu" onclick="Addclass()">
+                <div class="menu-bars"></div>
+
+            </div>            
+            <div class="mobile__linkholder">
+                <ul>
+                    <li><a href="#" class="mobile__header-links active-link">Home</a></li>
+                    <li><a href="#aboutus" class="mobile__header-links">About Us</a></li>
+                    <li><a href="#explorefoods" class="mobile__header-links">Explore Food</a></li>
+                    <!-- <li><a href="#">Review</a></li> -->
+                    <li><a href="#faq" class="mobile__header-links">FAQ</a></li>
+                
+                </ul>
+                <button class="btn ">+1 (000) XXX XXX</button>
+            </div>
+        </nav>
+        <nav class="nav-desktop">
+            <div class="header-logo">
+                <i class="fa-regular fa-hand-lizard"></i>
+            </div>
+            <div class="link-holder">
+                <ul>
+                    <li><a href="#" class="header-links">Home</a></li>
+                    <li><a href="#aboutus" class="header-links">About Us</a></li>
+                    <li><a href="#explorefoods" class="header-links">Explore Food</a></li>
+                    <!-- <li><a href="#">Review</a></li> -->
+                    <li><a href="#faq" class="header-links">FAQ</a></li>
+                
+                </ul>
+                <button class="btn btn-main">+1 (000) XXX XXX</button>
+            </div>
+        </nav>
+
+
+
+        <section class="header__banner">
+            <div class="header-banner__container">
+                <div class="header-banner__text-content">
+                    <h1>Good food choices <br />
+                        are good <br />
+                        investments
+                    </h1>
+                    <p>
+                        We offer 6 delicious pizzas, from basic cheese and basil pizza (&euro;)
+                        to our signature classic pizzeria ('Tavern'). A variety of our specialty pizzeria offers great value
+                        money such as 'Pizzeria de la Nazionale', where we've craeted a new delicious pizza in the heart of Milan
+                        and the 'Madrone' pizzeria, which offers all day dinning, with an italian twist to the menu.
+                    </p>
+     <button class="btn btn-light">Learn more <i class="fa-solid fa-arrow-right-long banner-icon"></i></button>         
+     <button class="btn btn-main">Order now <i class="fa-solid fa-basket-shopping banner-icon"></i></button>         
+    
+                </div> 
+                </div>
+               
+        </section>
+
+        <section class="header__counter">
+            <div class="counter__item">
+                <h2>1287+</h2>
+                <p>SAVINGS</p>
+            </div>
+            <div class="counter__item">
+                <h2>6428+</h2>
+                <p>PHOTOS</p>
+            </div>
+            <div class="counter__item">
+                <h2>1004+</h2>
+                <p>ROCKETS</p>
+            </div>
+            <div class="counter__item">
+                <h2>4831</h2>
+                <p>GLOBES</p>
+            </div>
+        </section>
+    </header>
 
 
     <!-- header section ends hered -->
@@ -30,16 +115,64 @@
 
     <!-- About us section starts here  -->
 
-    <section class="About-us">
+    <section class="about-us" id="aboutus">
+        <div class="about-us__card-container">
+            <div class="about-us__card-imageholder">
+                <img src="./img/about1.png" alt="Your browser does not support this image format">
+            </div>
+            <div class="about-us__text-content-holder">
+                <h2>
+                    We pride ourselves on <br />
+                    making real food from the <br />
+                    Ingredient 
+                </h2>
+                <p>9+ We also provide gluten free menu amd desserts for those who are on the look out for something new. We are passionate about keeping the kitchen fresh and intact, and are very hard working, always on time and making sure that the end-product is pleasing for everyone. Our menu is based on the best seasonal and imported Ingredients  </p>
+                <button class="btn btn-main">
+                    learn more <i class="fa-solid fa-arrow-right-long cardicon"></i>
+                </button>
+            </div>
+        </div>
+        <div class="about-us__card-container">
+            <div class="about-us__text-content-holder">
+                 <h2>
+                    We make everything by <br /> 
+                    hand with the best possible <br />
+                    ingredients
+                </h2>
+                <p>
+                    We will show you what it is like to make it on the run with us, we don't mind sharing a few too many laughs along the way
+                </p>
+                <ul>
+                    <li> <i class="fa-solid fa-check cardcheck-icon"></i>Panzenella</li>
+                    <li> <i class="fa-solid fa-check cardcheck-icon"></i>Mushroom Risotto</li>
+                    <li> <i class="fa-solid fa-check cardcheck-icon"></i>Pasta Carbonara</li>
+                    <li> <i class="fa-solid fa-check cardcheck-icon"></i>Caperese Salad with Pesto Sauce</li>
+                </ul>
+                <button class="btn btn-main">
+                    learn more <i class="fa-solid fa-arrow-right-long cardicon"></i>
+                </button>
+            </div>
+            <div class="about-us__card-imageholder">
+                <img src="./img/about2.png" alt="Yummy2">
+            </div>
+
+        </div>
+
+
+
+
+
+
         <div class="about-us__banner-holder">
             <h2>When a man's stomach is full it makes no difference whethervhe is rich or poor</h2>
-            <p>We you what you always wanted, and the best in authentic italian food - with a menu that ranges from starters, lassagna, fresh pastas, pizzas, risotto, antipasti, pasta e fettuccini, and so much more. We don't just serve food, we do an amazing job at making it special. We don't just provide unique food, we think about your dinning experience</p>
+            <p>We you what you always wanted, and the best in authentic italian food - with a menu that ranges from starters, lassagna, fresh pastas, pizzas, risotto, antipasti, pasta e fettuccini, and so much more. We don't just serve food, we do an amazing job at making it special. We don't just provide unique food, we think about your dinning experience.</p>
             <button class="btn-waves"><i class="fa-solid fa-play"></i></button>
+        </div>
     </section>
     <!-- About us section ends here  -->
     
     <!-- Explore foods section starts here  -->
-    <section class="explore-foods">
+    <section class="explore-foods" id="explorefoods">
         <h2>Explore Our Foods</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et provident reiciendis harum aut, nostrum, consequuntur voluptate maxime quod voluptatem libero ipsa nulla, amet ducimus? Consequuntur velit quo autem magnam illum!</p>
         <div class="foodcard-container">
@@ -82,7 +215,7 @@
 
 
     <!-- FAQ section starts here  -->
-    <section class="faq">
+    <section class="faq" id="faq">
         <h2>Frequently Asked Questions</h2>
         <div class="faqs__container">
             <div class="faqs__item">
@@ -108,7 +241,7 @@
 
         <div class="faq__parallax">
             <h2>Baked fresh daily by Bakers with passion.</h2>
-            <button class="btn btn-main">Learn more</button>
+            <button class="btn btn-light">Learn More <i class="fa-solid fa-arrow-right-long banner-icon"></i></button>
         </div>
     </section>
     <!-- FAQ section ends here  -->
@@ -172,5 +305,6 @@
     </footer>
     <!-- Footer section ends here -->
 
+    <script src="main.js"></script>
 </body>
 </html>
